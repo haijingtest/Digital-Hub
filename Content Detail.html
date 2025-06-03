@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Detail - Asia Philanthropy Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+  <nav class="bg-white shadow sticky top-0 z-10">
+    <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <a href="ContentHub.html"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=48&q=80" alt="Logo" class="h-10 w-10 rounded-full"></a>
+        <span class="text-2xl font-bold text-indigo-700">Asia Philanthropy Hub</span>
+      </div>
+      <a href="ContentHub.html" class="text-indigo-600 hover:underline"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <div class="flex flex-col md:flex-row md:space-x-8">
+      <div class="flex-1">
+        <h1 class="text-3xl font-bold text-indigo-800 mb-2" id="contentTitle">Content Title</h1>
+        <div class="flex items-center space-x-4 mb-4">
+          <span class="text-gray-500 text-sm" id="contentMeta">Country · Date · Category</span>
+          <button id="bookmarkBtn" class="ml-2 text-gray-400 hover:text-indigo-600" title="Bookmark"><i class="far fa-bookmark"></i></button>
+          <button id="highlightBtn" class="ml-2 text-gray-400 hover:text-yellow-500" title="Highlight Important"><i class="fas fa-highlighter"></i></button>
+          <button id="downloadBtn" class="ml-2 text-gray-400 hover:text-green-600" title="Download"><i class="fas fa-download"></i></button>
+          <button id="shareBtn" class="ml-2 text-gray-400 hover:text-blue-600" title="Share"><i class="fas fa-share-alt"></i></button>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+          <h2 class="text-lg font-semibold mb-2">Summary</h2>
+          <p class="text-gray-700" id="contentSummary">This is a summary of the research or case. It provides a concise overview of the main findings, trends, or results relevant to philanthropy in Asia.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-semibold mb-2">Full Content</h2>
+          <div class="prose max-w-none text-gray-800" id="contentBody">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec dictum urna quam at urna. Etiam euismod, justo at facilisis cursus, enim erat dictum urna, nec dictum urna quam at urna.</p>
+            <ul>
+              <li>Key insight 1: ...</li>
+              <li>Key insight 2: ...</li>
+              <li>Key insight 3: ...</li>
+            </ul>
+            <p>For more information, visit <a href="#" class="text-indigo-600 underline">related research</a>.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="w-full md:w-64 mt-8 md:mt-0">
+        <div class="bg-white rounded-lg shadow p-4 mb-6">
+          <h3 class="font-semibold text-indigo-700 mb-2">Related Content</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="Content Detail.html?id=2" class="text-indigo-600 hover:underline">Cross-border Giving</a></li>
+            <li><a href="Content Detail.html?id=3" class="text-indigo-600 hover:underline">Impact Measurement</a></li>
+            <li><a href="Content Detail.html?id=4" class="text-indigo-600 hover:underline">Community Empowerment in Indonesia</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="font-semibold text-indigo-700 mb-2">Download & Share</h3>
+          <button class="w-full flex items-center justify-center py-2 mb-2 bg-green-100 text-green-700 rounded hover:bg-green-200" id="downloadBtn2"><i class="fas fa-download mr-2"></i>Download PDF</button>
+          <button class="w-full flex items-center justify-center py-2 bg-blue-100 text-blue-700 rounded hover:bg-blue-200" id="shareBtn2"><i class="fas fa-share-alt mr-2"></i>Share</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="py-6 text-center text-gray-400 text-sm">
+    &copy; 2024 Asia Philanthropy Content Hub. All rights reserved.
+  </footer>
+
+  <script>
+    // 书签功能
+    document.getElementById('bookmarkBtn').addEventListener('click', function() {
+      this.classList.toggle('text-indigo-600');
+      this.querySelector('i').classList.toggle('fas');
+      this.querySelector('i').classList.toggle('far');
+    });
+    // 高亮功能
+    document.getElementById('highlightBtn').addEventListener('click', function() {
+      document.getElementById('contentBody').classList.toggle('bg-yellow-100');
+    });
+    // 下载功能
+    function downloadContent() {
+      const text = document.getElementById('contentBody').innerText;
+      const blob = new Blob([text], {type: 'text/plain'});
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'content.txt';
+      link.click();
+    }
+    document.getElementById('downloadBtn').addEventListener('click', downloadContent);
+    document.getElementById('downloadBtn2').addEventListener('click', downloadContent);
+    // 分享功能
+    function shareContent() {
+      if (navigator.share) {
+        navigator.share({
+          title: document.getElementById('contentTitle').innerText,
+          text: document.getElementById('contentSummary').innerText,
+          url: window.location.href
+        });
+      } else {
+        alert('Share not supported on this browser.');
+      }
+    }
+    document.getElementById('shareBtn').addEventListener('click', shareContent);
+    document.getElementById('shareBtn2').addEventListener('click', shareContent);
+    // 动态填充内容（可根据 URL 参数加载不同内容）
+    // ...可扩展...
+  </script>
+</body>
+</html> 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India - Asia Philanthropy Content Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow sticky top-0 z-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <a href="ContentHub.html" class="flex items-center space-x-3">
+            <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full object-contain max-w-[48px] max-h-[48px] sm:max-w-[56px] sm:max-h-[56px]">
+            <span class="text-xl sm:text-2xl font-bold text-indigo-700">Asia Philanthropy Hub</span>
+          </a>
+        </div>
+        <div class="hidden sm:flex items-center space-x-4">
+          <a href="ContentHub.html#map" class="text-gray-700 hover:text-indigo-600">Map</a>
+          <a href="ContentHub.html#trends" class="text-gray-700 hover:text-indigo-600">Trends</a>
+          <a href="ContentHub.html#cases" class="text-gray-700 hover:text-indigo-600">Cases</a>
+          <a href="ContentHub.html#experiments" class="text-gray-700 hover:text-indigo-600">Experiments</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Countries Hyperlinks Navigation -->
+  <div class="bg-white border-b">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-4 py-4">
+        <a href="CHN_Content Detail.html" class="text-gray-600 hover:text-indigo-600">China</a>
+        <span class="text-gray-400">|</span>
+        <a href="IND_Content Detail.html" class="text-indigo-600 font-semibold">India</a>
+        <span class="text-gray-400">|</span>
+        <a href="JPN_Content Detail.html" class="text-gray-600 hover:text-indigo-600">Japan</a>
+        <span class="text-gray-400">|</span>
+        <a href="SGP_Content Detail.html" class="text-gray-600 hover:text-indigo-600">Singapore</a>
+        <span class="text-gray-400">|</span>
+        <a href="KOR_Content Detail.html" class="text-gray-600 hover:text-indigo-600">South Korea</a>
+        <span class="text-gray-400">|</span>
+        <a href="IDN_Content Detail.html" class="text-gray-600 hover:text-indigo-600">Indonesia</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Country Overview -->
+  <section class="py-10 bg-gradient-to-r from-indigo-50 to-blue-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-indigo-800 mb-6">India</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">Research Papers</h3>
+            <p class="text-3xl font-bold text-indigo-600">142</p>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">Trends Identified</h3>
+            <p class="text-3xl font-bold text-indigo-600">19</p>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">Success Stories</h3>
+            <p class="text-3xl font-bold text-indigo-600">38</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Statistics Diagram & Indicators -->
+  <section class="py-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-semibold text-indigo-800 mb-6">Key Indicators</h2>
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+          <div id="regionalIndexChart" style="width:100%;height:320px;"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <h3 class="text-lg font-medium text-indigo-700 mb-4">Corporate Level Indicators</h3>
+            <ul class="space-y-3">
+              <li class="flex justify-between"><span>Financial</span><span class="font-bold text-indigo-600">78</span></li>
+              <li class="flex justify-between"><span>Time & Talent</span><span class="font-bold text-indigo-600">65</span></li>
+              <li class="flex justify-between"><span>Voice & Influence</span><span class="font-bold text-indigo-600">72</span></li>
+              <li class="flex justify-between"><span>Innovation</span><span class="font-bold text-indigo-600">81</span></li>
+              <li class="flex justify-between"><span>Transparency</span><span class="font-bold text-indigo-600">69</span></li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <h3 class="text-lg font-medium text-indigo-700 mb-4">Region Level Indicators</h3>
+            <ul class="space-y-3">
+              <li class="flex justify-between"><span>Regulatory Environment</span><span class="font-bold text-indigo-600">74</span></li>
+              <li class="flex justify-between"><span>Philanthropic Culture</span><span class="font-bold text-indigo-600">83</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Featured Research Paper -->
+  <section class="py-10 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-semibold text-indigo-800 mb-6">Featured Research Paper</h2>
+        <div class="bg-white rounded-lg shadow flex flex-col md:flex-row items-center p-6 gap-6">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="Research Cover" class="w-40 h-56 object-cover rounded-md border border-gray-200">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="inline-block bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"><i class="fas fa-book mr-1"></i> Research</span>
+              <span class="inline-block bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-medium"><i class="fas fa-lightbulb mr-1"></i> Innovation</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Social Impact Investing in India: A New Paradigm</h3>
+            <p class="text-gray-600 mb-4">Exploring the growth and challenges of impact investing in India's philanthropic landscape.</p>
+            <a href="#expanded-research" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded hover:bg-indigo-700 font-medium transition">Discover More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Expanded Research Document -->
+  <section id="expanded-research" class="py-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-semibold text-indigo-800 mb-6">Research Document</h2>
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex gap-2">
+              <button class="bg-gray-100 hover:bg-indigo-100 text-indigo-600 px-3 py-1 rounded flex items-center text-sm"><i class="fas fa-bookmark mr-1"></i> Bookmark</button>
+              <button class="bg-gray-100 hover:bg-indigo-100 text-indigo-600 px-3 py-1 rounded flex items-center text-sm"><i class="fas fa-highlighter mr-1"></i> Highlight</button>
+              <button class="bg-gray-100 hover:bg-indigo-100 text-indigo-600 px-3 py-1 rounded flex items-center text-sm"><i class="fas fa-download mr-1"></i> Download</button>
+            </div>
+            <span class="text-gray-400 text-xs">Last updated: 2024-05-01</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Social Impact Investing in India: A New Paradigm</h3>
+          <p class="text-gray-600 mb-4">Summary: This document provides an in-depth analysis of the evolution of social impact investing in India, highlighting key trends, challenges, and opportunities for the philanthropic sector. The research draws on case studies, expert interviews, and data analysis to offer actionable insights for practitioners and policymakers.</p>
+          <div class="prose max-w-none">
+            <h4>Overview</h4>
+            <p>India's philanthropic sector has witnessed significant growth in impact investing, with corporations and individuals increasingly seeking to generate measurable social and environmental impact alongside financial returns. This document explores the regulatory landscape, innovative financing models, and the role of technology in scaling impact.</p>
+            <ul>
+              <li><strong>Key Finding 1:</strong> Blended finance models are gaining traction, enabling collaboration between public, private, and philanthropic capital.</li>
+              <li><strong>Key Finding 2:</strong> There is a growing emphasis on transparency and impact measurement, with new tools and frameworks emerging.</li>
+              <li><strong>Key Finding 3:</strong> Talent and leadership development remain critical for scaling successful initiatives.</li>
+            </ul>
+            <h4>Important Content</h4>
+            <p><mark>Innovative approaches to impact measurement</mark> are helping organizations better understand and communicate their value creation. <mark>Regulatory reforms</mark> have also played a pivotal role in enabling new forms of giving and investment.</p>
+          </div>
+          <div class="flex gap-4 mt-6">
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 font-medium flex items-center"><i class="fas fa-bookmark mr-2"></i> Add to Collection</button>
+            <button class="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 font-medium flex items-center"><i class="fas fa-share mr-2"></i> Share</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Footer -->
+  <footer class="py-8 bg-white border-t border-gray-200 mt-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+        <button onclick="window.history.back()" class="flex items-center text-indigo-600 hover:text-indigo-800 font-medium"><i class="fas fa-arrow-left mr-2"></i>Return</button>
+        <div class="flex gap-4">
+          <a href="#" class="text-gray-500 hover:text-indigo-600">About</a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600">Contact</a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600">FAQ</a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600">Privacy Policy</a>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="text-gray-400 hover:text-indigo-600"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" class="text-gray-400 hover:text-indigo-600"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="text-gray-400 hover:text-indigo-600"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="text-center text-gray-400 text-xs">&copy; 2024 Asia Philanthropy Content Hub. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ECharts for Section 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <script>
+    var regionalIndexChart = echarts.init(document.getElementById('regionalIndexChart'));
+    var option = {
+      tooltip: { trigger: 'axis' },
+      radar: {
+        indicator: [
+          { name: 'Financial', max: 100 },
+          { name: 'Time & Talent', max: 100 },
+          { name: 'Voice & Influence', max: 100 },
+          { name: 'Innovation', max: 100 },
+          { name: 'Transparency', max: 100 },
+          { name: 'Regulatory Env.', max: 100 },
+          { name: 'Philanthropic Culture', max: 100 }
+        ],
+        radius: 90,
+        splitLine: { lineStyle: { color: '#E3E6EA' } },
+        splitArea: { areaStyle: { color: ['#f8fafc', '#e0e7ef'] } },
+        axisLine: { lineStyle: { color: '#6366F1' } },
+        name: { color: '#6366F1', fontWeight: 500, fontSize: 14 }
+      },
+      series: [{
+        name: 'India Indicators',
+        type: 'radar',
+        data: [
+          {
+            value: [78, 65, 72, 81, 69, 74, 83],
+            name: 'India',
+            areaStyle: { color: 'rgba(99,102,241,0.2)' },
+            lineStyle: { color: '#6366F1', width: 3 },
+            symbol: 'circle',
+            itemStyle: { color: '#06B6D4' }
+          }
+        ]
+      }]
+    };
+    regionalIndexChart.setOption(option);
+    window.addEventListener('resize', function() { regionalIndexChart.resize(); });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asia Philanthropy Content Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Navigation Bar & Search -->
+  <nav class="bg-white shadow sticky top-0 z-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full object-contain max-w-[48px] max-h-[48px] sm:max-w-[56px] sm:max-h-[56px]">
+          <span class="text-xl sm:text-2xl font-bold text-indigo-700">Asia Philanthropy Hub</span>
+        </div>
+        <div class="hidden sm:flex items-center space-x-4">
+          <a href="#map" class="text-gray-700 hover:text-indigo-600">Map</a>
+          <a href="#trends" class="text-gray-700 hover:text-indigo-600">Trends</a>
+          <a href="#cases" class="text-gray-700 hover:text-indigo-600">Cases</a>
+          <a href="#experiments" class="text-gray-700 hover:text-indigo-600">Experiments</a>
+        </div>
+      </div>
+      <div class="mt-4">
+        <div class="relative max-w-2xl mx-auto">
+          <input id="searchInput" type="text" placeholder="Search research, trends, countries..." class="w-full border border-gray-300 rounded-lg py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+          <span class="absolute left-3 top-2.5 text-gray-400"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section 2: Regional Comparison -->
+  <section class="py-10 bg-gray-50" id="regions">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-xl font-semibold text-indigo-800 mb-8 text-center tracking-wide">Regional Corporate Philanthropy Index</h2>
+        <div class="bg-white rounded-2xl shadow p-8 mb-10">
+          <div id="regionalChart" style="width: 100%; height: 400px;"></div>
+        </div>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <h3 class="text-lg font-bold text-indigo-700 mb-2">North America</h3>
+            <div class="flex items-center w-full">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="h-2.5 rounded-full" style="width: 85%; background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);"></div>
+              </div>
+              <span class="ml-4 text-lg font-bold text-indigo-700">85</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <h3 class="text-lg font-bold text-indigo-700 mb-2">South America</h3>
+            <div class="flex items-center w-full">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="h-2.5 rounded-full" style="width: 75%; background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);"></div>
+              </div>
+              <span class="ml-4 text-lg font-bold text-indigo-700">75</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <h3 class="text-lg font-bold text-indigo-700 mb-2">Europe</h3>
+            <div class="flex items-center w-full">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="h-2.5 rounded-full" style="width: 82%; background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);"></div>
+              </div>
+              <span class="ml-4 text-lg font-bold text-indigo-700">82</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <h3 class="text-lg font-bold text-indigo-700 mb-2">Africa</h3>
+            <div class="flex items-center w-full">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="h-2.5 rounded-full" style="width: 60%; background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);"></div>
+              </div>
+              <span class="ml-4 text-lg font-bold text-indigo-700">60</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <h3 class="text-lg font-bold text-indigo-700 mb-2">Asia Pacific</h3>
+            <div class="flex items-center w-full">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="h-2.5 rounded-full" style="width: 78%; background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);"></div>
+              </div>
+              <span class="ml-4 text-lg font-bold text-indigo-700">78</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <h3 class="text-lg font-bold text-indigo-700 mb-2">Middle East</h3>
+            <div class="flex items-center w-full">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="h-2.5 rounded-full" style="width: 70%; background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);"></div>
+              </div>
+              <span class="ml-4 text-lg font-bold text-indigo-700">70</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Asia Map Visualization -->
+  <section id="map" class="py-10 bg-gradient-to-r from-indigo-50 to-blue-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl font-semibold text-indigo-800 mb-6 text-center">Explore by Country</h2>
+      <div class="flex flex-col lg:flex-row items-center gap-8">
+        <div class="w-full lg:w-2/3">
+          <!-- ECharts Asia Map Container -->
+          <div id="asiaMapEchart" class="rounded-lg shadow-lg w-full h-[400px] sm:h-[500px] bg-white relative mx-auto">
+            <div id="mapLoading" class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75">
+              <div class="text-indigo-600">Loading map...</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/3">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+            <li><button class="country-btn text-left w-full px-4 py-2 rounded hover:bg-indigo-100" data-country="China">China</button></li>
+            <li><button class="country-btn text-left w-full px-4 py-2 rounded hover:bg-indigo-100" data-country="India">India</button></li>
+            <li><button class="country-btn text-left w-full px-4 py-2 rounded hover:bg-indigo-100" data-country="Japan">Japan</button></li>
+            <li><button class="country-btn text-left w-full px-4 py-2 rounded hover:bg-indigo-100" data-country="Singapore">Singapore</button></li>
+            <li><button class="country-btn text-left w-full px-4 py-2 rounded hover:bg-indigo-100" data-country="South Korea">South Korea</button></li>
+            <li><button class="country-btn text-left w-full px-4 py-2 rounded hover:bg-indigo-100" data-country="Indonesia">Indonesia</button></li>
+            <li><button class="country-btn text-left w-full px-4 py-2 rounded hover:bg-indigo-100" data-country="More">More...</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trends Section -->
+  <section id="trends" class="py-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl font-semibold text-indigo-800 mb-6 text-center">Charity Trends in Asia</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Trends" class="rounded mb-4 h-32 object-cover">
+          <h3 class="font-bold text-lg mb-2">Digital Philanthropy Growth</h3>
+          <p class="text-gray-600 flex-1">How digital platforms are transforming giving in Asia. <a href="Content Detail.html?id=1" class="text-indigo-600 hover:underline">Read more</a></p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Trends" class="rounded mb-4 h-32 object-cover">
+          <h3 class="font-bold text-lg mb-2">Cross-border Giving</h3>
+          <p class="text-gray-600 flex-1">Trends in international donations and collaborations. <a href="Content Detail.html?id=2" class="text-indigo-600 hover:underline">Read more</a></p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Trends" class="rounded mb-4 h-32 object-cover">
+          <h3 class="font-bold text-lg mb-2">Impact Measurement</h3>
+          <p class="text-gray-600 flex-1">How organizations measure and report their social impact. <a href="Content Detail.html?id=3" class="text-indigo-600 hover:underline">Read more</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Cases Section -->
+  <section id="cases" class="py-10 bg-gray-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl font-semibold text-indigo-800 mb-6 text-center">Success Stories</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3fd9?auto=format&fit=crop&w=400&q=80" alt="Case" class="rounded mb-4 h-32 object-cover">
+          <h3 class="font-bold text-lg mb-2">Community Empowerment in Indonesia</h3>
+          <p class="text-gray-600 flex-1">A case study on grassroots initiatives driving change. <a href="Content Detail.html?id=4" class="text-indigo-600 hover:underline">Read more</a></p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Case" class="rounded mb-4 h-32 object-cover">
+          <h3 class="font-bold text-lg mb-2">Tech for Good in Singapore</h3>
+          <p class="text-gray-600 flex-1">Leveraging technology to maximize social impact. <a href="Content Detail.html?id=5" class="text-indigo-600 hover:underline">Read more</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiments Section -->
+  <section id="experiments" class="py-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl font-semibold text-indigo-800 mb-6 text-center">Experiment Results</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Experiment" class="rounded mb-4 h-32 object-cover">
+          <h3 class="font-bold text-lg mb-2">Behavioral Nudges in Giving</h3>
+          <p class="text-gray-600 flex-1">Testing what motivates donors in Asia. <a href="Content Detail.html?id=6" class="text-indigo-600 hover:underline">Read more</a></p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Experiment" class="rounded mb-4 h-32 object-cover">
+          <h3 class="font-bold text-lg mb-2">Transparency Tools</h3>
+          <p class="text-gray-600 flex-1">How transparency increases trust and donations. <a href="Content Detail.html?id=7" class="text-indigo-600 hover:underline">Read more</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-gray-400 text-sm">
+    &copy; 2024 Asia Philanthropy Content Hub. All rights reserved.
+  </footer>
+
+  <!-- ECharts Core -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- ECharts Maps -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/map/js/china.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/map/js/asia.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+  <script>
+    // Regional Comparison Chart
+    var regionalChart = echarts.init(document.getElementById('regionalChart'));
+    
+    var regionalOption = {
+      backgroundColor: '#fff',
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        backgroundColor: '#f3f4f6',
+        textStyle: { color: '#334155', fontWeight: 'bold' }
+      },
+      grid: {
+        left: '3%', right: '4%', bottom: '3%', containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        data: ['North America', 'South America', 'Europe', 'Africa', 'Asia Pacific', 'Middle East'],
+        axisLabel: {
+          color: '#334155',
+          fontWeight: 'bold',
+          fontSize: 18,
+          interval: 0,
+          rotate: 30
+        },
+        axisLine: { lineStyle: { color: '#cbd5e1' } },
+        axisTick: { show: false }
+      },
+      yAxis: {
+        type: 'value',
+        max: 100,
+        name: 'Score',
+        nameTextStyle: { color: '#6366f1', fontWeight: 'bold' },
+        axisLabel: { color: '#334155', fontWeight: 'bold' },
+        splitLine: { lineStyle: { color: '#e5e7eb', type: 'dashed' } }
+      },
+      series: [{
+        name: 'Corporate Philanthropy Score',
+        type: 'bar',
+        data: [85, 75, 82, 60, 78, 70],
+        itemStyle: {
+          color: {
+            type: 'linear',
+            x: 0, y: 0, x2: 0, y2: 1,
+            colorStops: [
+              { offset: 0, color: '#38bdf8' }, // blue top
+              { offset: 1, color: '#6366f1' } // indigo bottom
+            ]
+          },
+          borderRadius: [8, 8, 0, 0]
+        },
+        label: {
+          show: true,
+          position: 'top',
+          color: '#6366f1',
+          fontWeight: 'bold',
+          fontSize: 16,
+          formatter: '{c}'
+        },
+        barWidth: '40%'
+      }]
+    };
+
+    regionalChart.setOption(regionalOption);
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      regionalChart.resize();
+    });
+  </script>
+</body>
+</html> 
